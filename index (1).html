@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Ayukoso Bonsu | Spiritual Progression Portfolio</title>
+<meta name="description" content="A five-week Spiritual Progression Portfolio by Ayukoso Bonsu — reflections on stewardship, discipleship, and resilience as a cybersecurity student and disciple of Jesus Christ." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#0F1F3D;
+    --gold:#92702A;
+    --cream:#FBF7F0;
+    --green:#2D6A3F;
+    --white:#FFFFFF;
+    --ink:#1a1a1a;
+    --muted:#5a5a5a;
+    --border:#e8e1d2;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;scroll-padding-top:80px}
+  body{
+    font-family:'Inter',system-ui,-apple-system,Arial,sans-serif;
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.7;
+    font-size:17px;
+    -webkit-font-smoothing:antialiased;
+  }
+  h1,h2,h3,h4{font-family:'Lora',Georgia,serif;color:var(--navy);line-height:1.25;font-weight:700}
+  h1{font-size:clamp(2rem,5vw,3.25rem)}
+  h2{font-size:clamp(1.6rem,3.5vw,2.25rem);margin-bottom:1rem}
+  h3{font-size:clamp(1.25rem,2.5vw,1.5rem);margin:1.5rem 0 .75rem;color:var(--gold)}
+  h4{font-size:1.1rem;margin:1.25rem 0 .5rem;color:var(--navy)}
+  p{margin-bottom:1rem}
+  a{color:var(--gold);text-decoration:none}
+  a:hover{text-decoration:underline}
+
+  /* NAV */
+  nav.topnav{
+    position:fixed;top:0;left:0;right:0;z-index:100;
+    background:var(--navy);
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+  }
+  .nav-inner{
+    max-width:1100px;margin:0 auto;padding:.85rem 1.25rem;
+    display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;
+  }
+  .nav-brand{
+    font-family:'Lora',Georgia,serif;color:var(--white);font-weight:600;font-size:1rem;
+    letter-spacing:.3px;
+  }
+  .nav-brand span{color:var(--gold)}
+  .nav-links{display:flex;gap:.25rem;flex-wrap:wrap}
+  .nav-links a{
+    color:var(--white);font-size:.88rem;padding:.4rem .7rem;border-radius:4px;
+    transition:background .2s,color .2s;font-weight:500;
+  }
+  .nav-links a:hover{background:var(--gold);color:var(--white);text-decoration:none}
+
+  main{padding-top:90px}
+
+  /* HERO BANNERS */
+  .week-banner{
+    background:linear-gradient(135deg,var(--navy) 0%,#1a3158 100%);
+    color:var(--white);
+    padding:3.5rem 1.5rem;
+    text-align:center;
+    border-bottom:4px solid var(--gold);
+  }
+  .week-banner .label{
+    color:var(--gold);font-family:'Lora',Georgia,serif;font-weight:600;
+    letter-spacing:.25em;text-transform:uppercase;font-size:.95rem;margin-bottom:.75rem;
+  }
+  .week-banner h2{color:var(--white);font-size:clamp(1.8rem,4vw,2.75rem);margin-bottom:.5rem}
+  .week-banner .subtitle{color:#d9c79a;font-style:italic;font-family:'Lora',Georgia,serif;font-size:1.05rem}
+
+  /* INTRO HERO */
+  .hero{
+    background:linear-gradient(135deg,var(--navy) 0%,#15294d 50%,var(--navy) 100%);
+    color:var(--white);
+    padding:5rem 1.5rem 4.5rem;
+    text-align:center;
+    border-bottom:4px solid var(--gold);
+  }
+  .hero h1{color:var(--white)}
+  .hero .tag{color:var(--gold);letter-spacing:.3em;text-transform:uppercase;font-size:.85rem;margin-bottom:1.25rem;font-family:'Lora',serif}
+  .hero .by{color:#d9c79a;margin-top:1rem;font-family:'Lora',serif;font-style:italic;font-size:1.15rem}
+
+  /* CONTAINER */
+  .container{max-width:920px;margin:0 auto;padding:3rem 1.5rem}
+
+  /* CARDS */
+  .card{
+    background:var(--white);
+    border-radius:8px;
+    padding:2rem 2.25rem;
+    margin:1.5rem 0;
+    box-shadow:0 2px 12px rgba(15,31,61,.06);
+    border:1px solid var(--border);
+  }
+  .card-title-row{
+    border-bottom:2px solid var(--gold);
+    padding-bottom:.75rem;margin-bottom:1.25rem;
+  }
+  .principle-label{
+    display:inline-block;background:var(--gold);color:var(--white);
+    padding:.25rem .75rem;border-radius:3px;font-size:.75rem;font-weight:600;
+    letter-spacing:.15em;text-transform:uppercase;margin-bottom:.75rem;
+  }
+
+  /* SCRIPTURE PULL QUOTE */
+  blockquote.scripture{
+    border-left:5px solid var(--green);
+    background:rgba(45,106,63,.04);
+    font-family:'Lora',Georgia,serif;
+    font-style:italic;
+    font-size:1.1rem;
+    color:#1f3a26;
+    padding:1.25rem 1.5rem;
+    margin:1.5rem 0 1.5rem 1rem;
+    border-radius:0 6px 6px 0;
+    line-height:1.7;
+  }
+  blockquote.scripture cite{
+    display:block;margin-top:.6rem;font-style:normal;font-weight:600;
+    color:var(--green);font-size:.95rem;letter-spacing:.02em;
+  }
+
+  /* LISTS */
+  .materials{
+    background:var(--cream);
+    border:1px dashed var(--border);
+    border-radius:6px;
+    padding:1rem 1.25rem 1rem 2.25rem;
+    margin:1rem 0;
+  }
+  .materials h4{margin-top:0;color:var(--gold);font-size:.85rem;letter-spacing:.15em;text-transform:uppercase}
+  .materials li{margin:.35rem 0}
+
+  /* TABLES */
+  .table-wrap{overflow-x:auto;margin:1.5rem 0;border-radius:6px;box-shadow:0 1px 6px rgba(0,0,0,.05)}
+  table{width:100%;border-collapse:collapse;background:var(--white);font-size:.95rem;min-width:600px}
+  thead th{
+    background:var(--navy);color:var(--white);
+    text-align:left;padding:.85rem 1rem;font-family:'Lora',Georgia,serif;font-weight:600;
+    border-bottom:3px solid var(--gold);
+  }
+  tbody td{padding:.85rem 1rem;border-bottom:1px solid var(--border);vertical-align:top}
+  tbody tr:nth-child(even){background:#faf6ec}
+  tbody tr:hover{background:#f3ecd9}
+
+  /* THEME CARDS GRID */
+  .themes{display:grid;gap:1.25rem;grid-template-columns:1fr;margin:1.5rem 0}
+  .theme-card{
+    background:linear-gradient(160deg,var(--white) 0%,#faf6ec 100%);
+    border-radius:8px;padding:1.5rem 1.75rem;border:1px solid var(--border);
+    border-top:4px solid var(--green);
+  }
+  .theme-card h4{color:var(--green);font-family:'Lora',serif;font-size:1.1rem;margin-top:0}
+  .theme-card ul{list-style:none;padding:0;margin-top:.75rem}
+  .theme-card li{
+    padding:.6rem 0;border-bottom:1px solid var(--border);font-size:.92rem;
+  }
+  .theme-card li:last-child{border-bottom:none}
+  .theme-card li strong{color:var(--navy);display:block;font-family:'Lora',serif;font-weight:600}
+  .theme-card li em{color:var(--gold);font-style:normal;font-size:.82rem;display:block;margin:.15rem 0}
+
+  /* ITEM BLOCK */
+  .item{margin:2rem 0}
+  .item h3{color:var(--navy);font-family:'Lora',serif;border-left:4px solid var(--gold);padding-left:.85rem}
+  .item .why{
+    background:rgba(146,112,42,.06);border-left:3px solid var(--gold);
+    padding:1rem 1.25rem;margin:1rem 0;border-radius:0 4px 4px 0;
+  }
+  .item .why strong{display:block;color:var(--gold);font-family:'Lora',serif;margin-bottom:.4rem;letter-spacing:.05em;font-size:.85rem;text-transform:uppercase}
+
+  /* CALLOUTS */
+  .callout-italic{
+    font-family:'Lora',Georgia,serif;font-style:italic;font-size:1.1rem;
+    text-align:center;color:var(--navy);padding:1.5rem;
+    background:rgba(15,31,61,.04);border-radius:6px;margin:2rem 0;
+  }
+  .closing{
+    text-align:center;font-family:'Lora',Georgia,serif;font-style:italic;
+    font-size:1.4rem;color:var(--gold);padding:2.5rem 1rem;
+  }
+
+  /* WARNINGS */
+  .warning{
+    background:var(--white);border-left:4px solid var(--gold);
+    padding:1.1rem 1.4rem;margin:1rem 0;border-radius:0 4px 4px 0;
+    box-shadow:0 1px 4px rgba(0,0,0,.04);
+  }
+  .warning h4{margin-top:0;color:var(--navy)}
+  .warning .strategy{
+    margin-top:.5rem;padding-top:.5rem;border-top:1px dashed var(--border);
+    font-size:.95rem;
+  }
+  .warning .strategy strong{color:var(--green)}
+
+  /* BRANCH */
+  .branch{
+    margin:1.25rem 0;padding:1.25rem 1.5rem;
+    background:var(--white);border-radius:6px;border:1px solid var(--border);
+    border-left:4px solid var(--navy);
+  }
+  .branch h4{margin-top:0;color:var(--gold)}
+
+  /* FOOTER */
+  footer{
+    background:var(--navy);color:var(--white);text-align:center;
+    padding:2.5rem 1.5rem;margin-top:3rem;
+    border-top:4px solid var(--gold);
+  }
+  footer .name{font-family:'Lora',Georgia,serif;font-size:1.15rem;color:var(--gold);margin-bottom:.4rem}
+  footer .meta{color:#cfd5e2;font-size:.92rem}
+
+  ul.bullets{margin:0 0 1rem 1.5rem}
+  ul.bullets li{margin:.4rem 0}
+
+  @media (min-width:768px){
+    .themes{grid-template-columns:repeat(3,1fr)}
+  }
+  @media (max-width:768px){
+    .nav-inner{padding:.7rem 1rem}
+    .nav-brand{font-size:.85rem;width:100%;text-align:center}
+    .nav-links{justify-content:center;width:100%}
+    .nav-links a{font-size:.78rem;padding:.3rem .5rem}
+    main{padding-top:120px}
+    html{scroll-padding-top:130px}
+    .card{padding:1.5rem 1.25rem}
+    .hero{padding:3.5rem 1rem 3rem}
+    .week-banner{padding:2.5rem 1rem}
+    blockquote.scripture{margin-left:0;font-size:1rem}
+    .container{padding:2rem 1rem}
+  }
+  @media (max-width:400px){
+    body{font-size:16px}
+    .nav-links a{font-size:.72rem;padding:.25rem .4rem}
+  }
+</style>
+</head>
+<body>
+
+<nav class="topnav" aria-label="Primary">
+  <div class="nav-inner">
+    <div class="nav-brand">Ayukoso Bonsu <span>· Portfolio</span></div>
+    <div class="nav-links">
+      <a href="#introduction">Introduction</a>
+      <a href="#week1">Week 1</a>
+      <a href="#week2">Week 2</a>
+      <a href="#week3">Week 3</a>
+      <a href="#week4">Week 4</a>
+      <a href="#week5">Week 5</a>
+    </div>
+  </div>
+</nav>
+
+<main>
+
+<!-- INTRO HERO -->
+<section class="hero" id="top">
+  <div class="tag">Spiritual Progression Portfolio</div>
+  <h1>Faith, Stewardship, and the Shape of a Life</h1>
+  <p class="by">by Ayukoso Bonsu</p>
+</section>
+
+<!-- INTRODUCTION -->
+<section id="introduction" class="container">
+  <h2>About This Portfolio</h2>
+  <div class="card">
+    <p>This Spiritual Progression Portfolio is a record of five weeks of intentional reflection on the principles, scriptures, talks, and personal experiences that have shaped my spiritual journey and that continue to guide my development as a disciple of Jesus Christ. It is not a finished document. It is a living record of a person in motion.</p>
+    <p>I am Ayukoso Bonsu, a graduating cybersecurity student from Yaounde, Cameroon. My faith is not separate from my professional identity — it is the foundation of it. The conviction that underlies every project, every ethical decision, and every professional goal is this: the skills I am building are a stewardship, the people I will protect are children of God, and the kind of professional I become matters far more than the credentials I accumulate.</p>
+    <p>This portfolio is organized by week, tracing how three core guiding principles were identified, deepened, expanded, and applied across the course. It includes scriptures, talks from General Conference, personal reflections, and insights gained through quiet contemplation and prayer.</p>
+  </div>
+</section>
+
+<!-- WEEK 1 -->
+<section id="week1">
+  <div class="week-banner">
+    <div class="label">Week 1</div>
+    <h2>Identifying the Foundation</h2>
+    <div class="subtitle">Three Guiding Principles — Initial Identification</div>
+  </div>
+  <div class="container">
+    <div class="card">
+      <p>The first task of this course was to identify three spiritual principles that would serve as the foundation of this portfolio. These principles were not chosen at random. They emerged from honest reflection on my life, my journey as a student and professional-in-training, and my identity as a covenant disciple of Jesus Christ.</p>
+    </div>
+
+    <div class="card">
+      <span class="principle-label">Principle 1</span>
+      <h3>Stewardship as Sacred Responsibility</h3>
+      <p>Everything I have been given — my education, my mind, my technical skills, my access to knowledge — is not mine by personal merit alone. It is a stewardship entrusted to me by a Heavenly Father who expects me to multiply and use what I have received in the service of others. This principle reframes my entire career: I am not just building a resume. I am preparing to be trusted with something that matters — the security of systems that real people depend on.</p>
+      <blockquote class="scripture">
+        "For unto every one that hath shall be given, and he shall have abundance."
+        <cite>— Matthew 25:29</cite>
+      </blockquote>
+      <div class="materials">
+        <h4>Initial Materials</h4>
+        <ul>
+          <li>Matthew 25:14-30 — The Parable of the Talents</li>
+          <li>Doctrine and Covenants 130:18-19 — Intelligence gained in this life rises with us</li>
+          <li>President Nelson, <em>Make Time for the Lord</em> (October 2021)</li>
+          <li>Personal experience: The moment during my internship when helping a frustrated client felt less like tech support and more like genuine service</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="principle-label">Principle 2</span>
+      <h3>Discipleship Requires Integrity Without Compromise</h3>
+      <p>A disciple of Jesus Christ does not have two sets of standards — one for Sunday and one for the rest of the week. My identity as a follower of Christ is not a private matter I leave at the door when I enter a professional space. It is the foundation on which every professional decision is built. Integrity, for me, is a covenant commitment. What I do when no one is watching must be the same as what I do when everyone is watching.</p>
+      <blockquote class="scripture">
+        "Let virtue garnish thy thoughts unceasingly; then shall thy confidence wax strong in the presence of God."
+        <cite>— Doctrine and Covenants 121:45</cite>
+      </blockquote>
+      <div class="materials">
+        <h4>Initial Materials</h4>
+        <ul>
+          <li>Doctrine and Covenants 121:45</li>
+          <li>Esther 4:16 — If I perish, I perish</li>
+          <li>Sister Camille N. Johnson, <em>Invite Christ to Author Your Story</em> (October 2021)</li>
+          <li>Personal recognition that C2 security knowledge is morally weighted — held as a defender's stewardship</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <span class="principle-label">Principle 3</span>
+      <h3>Faith and Resilience Are Forged Through the Hard Things</h3>
+      <p>Growth — spiritual and professional — does not come from comfort. Every meaningful thing I have developed as a person has been shaped by difficulty: courses that pushed beyond what I thought I could understand, moments of self-doubt that forced me to rely on the Lord, challenges that revealed weaknesses I did not know I had.</p>
+      <blockquote class="scripture">
+        "I give unto men weakness that they may be humble... my grace is sufficient for all men that humble themselves before me."
+        <cite>— Ether 12:27</cite>
+      </blockquote>
+      <div class="materials">
+        <h4>Initial Materials</h4>
+        <ul>
+          <li>Ether 12:27</li>
+          <li>Proverbs 3:5-6 — Trust in the Lord with all thine heart</li>
+          <li>Elder Joseph B. Wirthlin, <em>Come What May and Love It</em> (October 2008)</li>
+          <li>Personal experience: Completing the C2 simulation project in IT316 — a project that felt impossible at the start of the semester</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Materials Summary</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Principle</th><th>Scripture</th><th>General Conference Talk</th><th>Personal Experience</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Stewardship as Sacred Responsibility</td><td>Matthew 25:14-30; D&amp;C 130:18-19</td><td>President Nelson, <em>Make Time for the Lord</em> (Oct 2021)</td><td>Internship: tech support felt like ministry</td></tr>
+            <tr><td>Discipleship Requires Integrity</td><td>D&amp;C 121:45; Esther 4:16</td><td>Sister Johnson, <em>Invite Christ to Author Your Story</em> (Oct 2021)</td><td>C2 knowledge held as a defender's stewardship</td></tr>
+            <tr><td>Faith and Resilience Through Hard Things</td><td>Ether 12:27; Proverbs 3:5-6</td><td>Elder Wirthlin, <em>Come What May and Love It</em> (Oct 2008)</td><td>Completing IT316 C2 simulation project</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEK 2 -->
+<section id="week2">
+  <div class="week-banner">
+    <div class="label">Week 2</div>
+    <h2>Expanding the Collection</h2>
+    <div class="subtitle">New materials, deeper themes</div>
+  </div>
+  <div class="container">
+
+    <div class="item card">
+      <h3>Item 1 — Make Time for the Lord (President Russell M. Nelson, October 2021)</h3>
+      <p>President Nelson warns that if most of the information we consume comes from social media and the world, our ability to hear the Spirit will diminish. He pleads with members to deliberately carve out time for the Lord each day through prayer, gospel study, Sabbath worship, and temple service.</p>
+      <div class="why"><strong>Why It Is Meaningful</strong>As a cybersecurity student surrounded constantly by digital information, President Nelson's counsel is a direct challenge to me: am I making intentional space for the Lord in the middle of all that, or am I letting the urgency of career preparation crowd Him out? My professional foundation will only be as stable as my spiritual one.</div>
+    </div>
+
+    <div class="item card">
+      <h3>Item 2 — Invite Christ to Author Your Story (Sister Camille N. Johnson, October 2021)</h3>
+      <p>Sister Johnson teaches that Christ is the author and finisher of our faith, and invites us to let Him be the author of our personal story as well. She explains that we often resist because we fear getting an answer that does not fit the narrative we have written for ourselves.</p>
+      <div class="why"><strong>Why It Is Meaningful</strong>I have been writing my own career story — the plan is to graduate, get certified, land a job, and grow in the field. That plan is good. But Sister Johnson's talk made me pause and ask: am I leaving room for the Lord to redirect, expand, or refine that story?</div>
+    </div>
+
+    <div class="item card">
+      <h3>Item 3 — Proverbs 3:5-6</h3>
+      <blockquote class="scripture">
+        "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."
+        <cite>— Proverbs 3:5-6</cite>
+      </blockquote>
+      <div class="why"><strong>Why It Is Meaningful</strong>This scripture sits at the intersection of every challenge I face. There are moments in my studies where I do not understand something, where I feel underprepared, or where I question whether I belong in this field. This verse is my anchor. It does not say to abandon effort — it says to layer faith on top of it.</div>
+    </div>
+
+    <div class="item card">
+      <h3>Item 4 — Personal Insight: Cybersecurity as an Act of Love</h3>
+      <p>During my internship, I noticed that when I helped someone frustrated with technology, the moment their problem was solved felt like genuine service. I began to see that protecting people's systems, data, and privacy is an act of love. A breach is not just a technical failure; it is harm done to a real person. Cybersecurity is not just a career — it is a form of ministry.</p>
+    </div>
+
+    <h3 style="margin-top:2.5rem;text-align:center;color:var(--navy);font-size:1.5rem">Organization by Themes</h3>
+    <div class="themes">
+      <div class="theme-card">
+        <h4>Theme 1 — Stewardship</h4>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:.5rem">Using What I Have Been Given to Serve Others</p>
+        <ul>
+          <li><strong>Parable of the Talents</strong><em>Matthew 25:14-30</em>Shift from studying for grades to studying to serve</li>
+          <li><strong>Make Time for the Lord</strong><em>President Nelson, Oct 2021</em>Guarding spiritual time as carefully as technical time</li>
+          <li><strong>Cybersecurity as an Act of Love</strong><em>Internship experience</em>First time tech support felt like ministry</li>
+        </ul>
+      </div>
+      <div class="theme-card">
+        <h4>Theme 2 — Discipleship &amp; Integrity</h4>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:.5rem">Letting Christ Author My Story</p>
+        <ul>
+          <li><strong>D&amp;C 121:45</strong><em>Doctrine and Covenants</em>Commitment to integrity as a non-negotiable standard</li>
+          <li><strong>Invite Christ to Author Your Story</strong><em>Sister Johnson, Oct 2021</em>Surrendering my career plan to the Lord's direction</li>
+          <li><strong>Esther 4:16</strong><em>Old Testament</em>Choosing the harder right over the easier wrong</li>
+        </ul>
+      </div>
+      <div class="theme-card">
+        <h4>Theme 3 — Faith &amp; Resilience</h4>
+        <p style="font-size:.9rem;color:var(--muted);margin-bottom:.5rem">Trusting the Lord Through the Hard Things</p>
+        <ul>
+          <li><strong>Ether 12:27</strong><em>Book of Mormon</em>Seeing weaknesses as invitations to grow</li>
+          <li><strong>Proverbs 3:5-6</strong><em>Old Testament</em>Anchoring faith when understanding runs out</li>
+          <li><strong>Come What May and Love It</strong><em>Elder Wirthlin, Oct 2008</em>Choosing joy and endurance over discouragement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEK 3 -->
+<section id="week3">
+  <div class="week-banner">
+    <div class="label">Week 3</div>
+    <h2>Deepening the Principles</h2>
+    <div class="subtitle">Full development and integration</div>
+  </div>
+  <div class="container">
+
+    <div class="card">
+      <span class="principle-label">Principle 1 — Full Development</span>
+      <h3>Stewardship as Sacred Responsibility</h3>
+      <p>During my IT316 course, I built and ran a simulated C2 environment — both the server side and the client side. I saw firsthand what it looks like when someone gains unauthorized access to a system and begins extracting data. What struck me was not the technical complexity — it was the human reality behind it. Every file being exfiltrated belongs to someone. Every credential being harvested is the key to someone's financial life, their personal communications, their livelihood. That realization permanently changed my relationship to this field.</p>
+      <h4>How It Shapes My Decisions</h4>
+      <p>When I face a choice between the fast path and the right path — cutting a corner on a security configuration, staying silent when I notice a vulnerability, or complying with an instruction I know to be ethically wrong — this principle asks me: are you honoring the stewardship you have been given?</p>
+    </div>
+
+    <div class="card">
+      <span class="principle-label">Principle 2 — Full Development</span>
+      <h3>Discipleship Requires Integrity Without Compromise</h3>
+      <p>Cybersecurity is a field built entirely on trust. An organization's security team is trusted with access to systems, data, and infrastructure that most employees never see. A single analyst with the wrong willingness to compromise can cause damage that takes years to repair. I have thought seriously about what kind of professional I want to be in those moments of pressure. I want my answer in those moments to already be settled — not negotiated in real time under pressure.</p>
+      <h4>How It Shapes My Decisions</h4>
+      <p>In Week 2, I worked through an ethical dilemma: what do you do when you are asked to deploy hidden surveillance on employees without their knowledge — for a legitimate security reason, with real stakes, but without transparency or consent? The justification was compelling. The business case was real. But the means were dishonest, and dishonesty does not become acceptable because the end is good.</p>
+    </div>
+
+    <div class="card">
+      <span class="principle-label">Principle 3 — Full Development</span>
+      <h3>Faith and Resilience Are Forged Through the Hard Things</h3>
+      <p>Breaking into cybersecurity as a first-generation professional, studying in Yaounde, Cameroon, completing an American college degree, and preparing to enter a global job market is not a small undertaking. There have been moments in this journey where the gap between where I am and where I need to be felt discouraging. What has kept me grounded is the conviction that the Lord does not call the equipped. He equips the called.</p>
+      <h4>How It Shapes My Decisions</h4>
+      <p>This principle governs how I respond to failure, confusion, and setbacks. When I do not understand a concept, my first response is no longer frustration — it is an invitation to study more carefully, pray more sincerely, and trust that understanding will come.</p>
+    </div>
+
+    <div class="card">
+      <h3>Temple Reflection — Intertwined Strands</h3>
+      <p>For this reflection, I chose a quiet space for sincere prayer and contemplation, approaching it with the same intentionality I would bring to a temple visit. What settled on me most clearly was a sense of integration. For much of my life I experienced my spiritual life and my professional preparation as parallel tracks — both important, but running alongside each other rather than through each other. This course has changed that.</p>
+      <p>Elder Bednar's analogy of intertwined strands speaks directly to this. A single strand has limited strength. But strands wound tightly together — each depending on and reinforcing the others — create something that cannot be easily broken. That is what I want my life to be: not a man who happens to work in cybersecurity and also goes to church, but someone whose faith and work are so genuinely integrated that you cannot understand one without the other.</p>
+      <div class="callout-italic">What brings me joy is protecting people. What brings me peace is knowing that the Lord is aware of me and is directing the path — even when I cannot see the next step clearly. Those two things together are enough to keep moving forward.</div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEK 4 -->
+<section id="week4">
+  <div class="week-banner">
+    <div class="label">Week 4</div>
+    <h2>Expansion and Deepening</h2>
+    <div class="subtitle">New voices, expanded competencies</div>
+  </div>
+  <div class="container">
+
+    <div class="item card">
+      <h3>New Item — Come What May and Love It (Elder Joseph B. Wirthlin, October 2008)</h3>
+      <p>Elder Wirthlin opens with his mother's counsel after a difficult loss: come what may, and love it. He offers four practices: learning to laugh so small frustrations do not steal our peace; seeking the eternal perspective; understanding the Lord's principle of compensation; and placing full trust in the Father and the Son.</p>
+      <div class="why"><strong>Personal Reflection</strong>What makes this talk personally significant is its honesty. Elder Wirthlin does not present faith as a shield against difficulty — he presents it as the tool we use to carry difficulty without being destroyed by it. Elder Wirthlin's counsel tells me that my gaps are not disqualifications. They are the current chapter of a story being written by a Lord who compensates the faithful.</div>
+      <p><strong>Connection to Principle 3:</strong> This talk deepens <em>Faith and Resilience Are Forged Through the Hard Things</em>. Resilience is not toughness alone — it is laughter, perspective, trust in compensation, and reliance on the Savior, working together.</p>
+    </div>
+
+    <div class="item card">
+      <h3>New Item — Be Not Afraid, Only Believe (President Dieter F. Uchtdorf, October 2015)</h3>
+      <p>President Uchtdorf uses the story of Daniel — a young Israelite captive educated in Babylon — as a model of faithful living in an unfaithful environment. He challenges disciples to ask whether they are like Daniel: consistent in belief and action, living their convictions daily. He pushes back against the glorification of skepticism, arguing that cynicism is easy while faithful living demands courage and character.</p>
+      <div class="why"><strong>Personal Reflection</strong>Daniel did not merely survive in Babylon. He excelled in it, as himself, without compromise. That is exactly the model I need for a cybersecurity career. The professional world is largely indifferent to faith, and indifference is its own kind of pressure — the quiet pressure to set aside what matters most.</div>
+      <p><strong>Connection to Principle 2:</strong> Daniel is the living model of <em>Discipleship Requires Integrity Without Compromise</em>. His integrity was structural — built into who he was before the tests came.</p>
+    </div>
+
+    <div class="item card">
+      <h3>New Item — Personal Reflection: The Lord's Redemption of Difficult Ground</h3>
+      <p>Elder Gary E. Stevenson dedicated the Okinawa Japan Temple in November 2023, speaking of 240,000 lives lost in the final battle of World War II, and the remarkable fact that the Lord chose that very ground — ground once defined by devastation — as the site of His house. The Lord does not avoid difficult ground. He redeems it. My own difficult ground — studying remotely, gaps in experience, geographic distance from the job market — can become the foundation on which something sacred is built, if I offer it to Him in faith.</p>
+    </div>
+
+    <div class="card">
+      <h3>Competencies — Faith and Profession Integrated</h3>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr><th>Professional Competency</th><th>Spiritual Principle</th><th>How They Are Connected</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Cybersecurity threat analysis and defense</td><td>Stewardship as Sacred Responsibility</td><td>Protecting systems is protecting people — a form of service and stewardship</td></tr>
+            <tr><td>Ethical decision-making under professional pressure</td><td>Discipleship Requires Integrity</td><td>Daniel held his values in Babylon; I hold mine in professional environments</td></tr>
+            <tr><td>Resilience and continuous learning</td><td>Faith and Resilience Through Hard Things</td><td>Elder Wirthlin's four anchors govern how I respond to setbacks</td></tr>
+            <tr><td>Honest self-assessment in portfolio development</td><td>Integrity and Transparency</td><td>Letting Christ author my story means honest documentation, not self-promotion</td></tr>
+            <tr><td>Certification pursuit and skill development</td><td>Stewardship</td><td>D&amp;C 130:18-19: intelligence gained in this life rises with us</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WEEK 5 -->
+<section id="week5">
+  <div class="week-banner">
+    <div class="label">Week 5</div>
+    <h2>Integration and Finalization</h2>
+    <div class="subtitle">Christlike attributes, warning signs, and a mental map for the path forward</div>
+  </div>
+  <div class="container">
+
+    <div class="card">
+      <h3>Christlike Attributes</h3>
+
+      <h4>Faith</h4>
+      <p>My faith has been exercised throughout this course in the choice to be honest about where I fall short, to engage seriously with the ethical dimensions of cybersecurity, and to keep building when the gap between where I am and where I need to be felt discouraging. Faith, for me, is not a feeling — it is a pattern of consistent action taken in the direction of a truth I have committed to.</p>
+
+      <h4>Integrity</h4>
+      <p>Throughout this portfolio, integrity has been the thread connecting every principle. The C2 project, the ethical dilemma analysis, the choice to include an honest reflective journal rather than a polished self-promotion document — all reflect a commitment to being the same person in private as in public.</p>
+
+      <h4>Service and Compassion</h4>
+      <p>My understanding of cybersecurity as a form of ministry — protecting real people whose data, privacy, and financial security depend on systems being defended well — is the Christlike attribute of compassion in professional form. I do not protect systems because it is my job. I protect them because the people behind those systems matter.</p>
+
+      <h4>Humility</h4>
+      <p>One of the most Christlike things this course has asked of me is honest self-assessment. A portfolio that presents only strengths is not honest. Mine documents what I have done, what I have learned, where I still need to grow, and what I am actively doing about that.</p>
+
+      <h4>Resilience and Long-Suffering</h4>
+      <p>Elder Wirthlin's counsel — come what may, and love it — is a description of the Savior's own posture toward suffering. He did not avoid difficulty. He endured it with grace, with purpose, and with His eyes fixed on the eternal outcome.</p>
+    </div>
+
+    <div class="card">
+      <h3>Warning Signs and Strategies</h3>
+
+      <div class="warning">
+        <h4>Warning 1 — Productivity Crowding Out Prayer</h4>
+        <p>When workloads intensify, my first tendency is to cut spiritual habits to create more time for tasks. This is the exact pattern President Nelson warned against.</p>
+        <div class="strategy"><strong>Strategy:</strong> Treat morning prayer and scripture study as non-negotiable appointments — scheduled first, not filled in if time remains.</div>
+      </div>
+
+      <div class="warning">
+        <h4>Warning 2 — Comparison and Discouragement</h4>
+        <p>Observing peers who appear more credentialed creates temptation toward comparison.</p>
+        <div class="strategy"><strong>Strategy:</strong> When I notice comparative thinking, redirect it immediately toward the specific next step I can take — one application, one study session, one skill practiced.</div>
+      </div>
+
+      <div class="warning">
+        <h4>Warning 3 — Ethical Drift Under Professional Pressure</h4>
+        <p>The most dangerous warning sign is the gradual normalization of small ethical compromises.</p>
+        <div class="strategy"><strong>Strategy:</strong> Maintain the ethical commitments documented in this portfolio as written standards and treat any deviation — however small — as a signal requiring immediate correction.</div>
+      </div>
+
+      <div class="warning">
+        <h4>Warning 4 — Disconnection from Purpose</h4>
+        <p>When technical demands consume all attention, it is easy to lose sight of why the work matters.</p>
+        <div class="strategy"><strong>Strategy:</strong> Regularly return to the personal insight of cybersecurity as ministry — the moment during my internship when tech support felt like genuine service.</div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h3>Mental Map — Faith and Professional Integration</h3>
+
+      <h4>The Center: Jesus Christ</h4>
+      <p>At the center of everything in this mental map is Jesus Christ — not as a category among others, but as the organizing principle around which everything else is arranged. Not faith plus career, but faith as the root from which everything else grows.</p>
+
+      <div class="branch">
+        <h4>Branch 1 — Who I Am: Identity Before Role</h4>
+        <p>Before I am a cybersecurity professional, I am a disciple of Jesus Christ and a child of God. That identity does not depend on employment status, certification level, or where I am in my career journey. It is fixed. The Okinawa Temple stands on ground that once knew only devastation — and the Lord chose that ground because He redeems difficult places. My identity in Christ is the same kind of ground.</p>
+      </div>
+
+      <div class="branch">
+        <h4>Branch 2 — How I Work: Stewardship in Practice</h4>
+        <p>Every technical skill I have developed — network analysis, threat simulation, automation design, incident response — is a stewardship. Protecting systems is protecting people. Choosing the harder ethical path when professional pressure demands the easier one is discipleship.</p>
+      </div>
+
+      <div class="branch">
+        <h4>Branch 3 — How I Grow: Resilience as Spiritual Practice</h4>
+        <p>Elder Wirthlin's four anchors — laughter, eternal perspective, compensation, trust — are not coping mechanisms. They are spiritual practices that transform adversity into growth.</p>
+      </div>
+
+      <div class="branch">
+        <h4>Branch 4 — How I Lead: Daniel in Babylon</h4>
+        <p>I am entering a field where most colleagues will not share my faith. That is not a problem to solve — it is the context in which I have been called to serve. Daniel worked in Babylon as himself, with excellence and consistency. My goal is the same: to embody my values so consistently that they speak for themselves.</p>
+      </div>
+
+      <div class="branch">
+        <h4>Branch 5 — Where I Am Going: A Covenant Path Forward</h4>
+        <p>This portfolio is not a finished product. It is a document of a person in motion. What this course has given me is not a credential — it is a framework for making decisions, understanding difficulty, and integrating faith and work into a single coherent life.</p>
+      </div>
+
+      <blockquote class="scripture">
+        "Trust in the Lord with all thine heart; and lean not unto thine own understanding. In all thy ways acknowledge him, and he shall direct thy paths."
+        <cite>— Proverbs 3:5-6</cite>
+      </blockquote>
+
+      <div class="closing">Come what may — and I intend to love it.</div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="name">Ayukoso Bonsu</div>
+  <div class="meta">Spiritual Progression Portfolio &nbsp;·&nbsp; Ensign College &nbsp;·&nbsp; June 2026</div>
+</footer>
+
+</body>
+</html>
